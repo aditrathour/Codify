@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^0.12.0",
+        "marked": "https://esm.sh/marked@^12.0.2"
+      }
+    }
+  </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="app-container">
+    <nav id="sidebar">
+      <h2 class="sidebar-title">Codify</h2>
+      <div class="nav-group">
+        <button class="nav-button active" data-feature="code-generator">
+          <span class="nav-icon">💻</span>
+          <span class="nav-text">Code Generator</span>
+        </button>
+        <button class="nav-button" data-feature="bug-squasher">
+          <span class="nav-icon">🐞</span>
+          <span class="nav-text">Bug Squasher</span>
+        </button>
+        <button class="nav-button" data-feature="code-explainer">
+          <span class="nav-icon">💡</span>
+          <span class="nav-text">Code Explainer</span>
+        </button>
+        <button class="nav-button" data-feature="ui-mockup-generator">
+          <span class="nav-icon">🎨</span>
+          <span class="nav-text">UI Mockup Generator</span>
+        </button>
+         <button class="nav-button" data-feature="doc-writer">
+          <span class="nav-icon">📝</span>
+          <span class="nav-text">Documentation Writer</span>
+        </button>
+        <button class="nav-button" data-feature="test-case-generator">
+          <span class="nav-icon">✅</span>
+          <span class="nav-text">Test Case Generator</span>
+        </button>
+      </div>
+       <div class="nav-group-bottom">
+        <button class="nav-button" data-feature="about">
+          <span class="nav-icon">👤</span>
+          <span class="nav-text">About</span>
+        </button>
+        <button class="nav-button" data-feature="author">
+          <span class="nav-icon">✏️</span>
+          <span class="nav-text">Author</span>
+        </button>
+      </div>
+    </nav>
+    <main id="main-content">
+      <header id="app-header">
+        <div class="app-title">Codify</div>
+        <p class="app-tagline">Code Faster Code Smarter</p>
+      </header>
+      <div id="feature-view">
+        <div id="feature-header">
+          <div id="feature-text-wrapper">
+            <h1 id="feature-title"></h1>
+            <p id="feature-description"></p>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div id="input-section">
+            <textarea id="prompt-input" placeholder="Enter your prompt here..."></textarea>
+          </div>
+          <div id="action-bar">
+            <button id="generate-button" aria-label="Generate response">Generate</button>
+          </div>
+          <div id="output-section">
+            <div id="output-container">
+                <div id="loader" class="hidden">
+                    <div class="spinner"></div>
+                </div>
+                <div id="response-content" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div id="about-view" class="hidden">
+          <h1>About Codify</h1>
+          <p>Codify is an AI-powered assistant designed to help developers write, debug, and understand code more efficiently. This tool leverages the power of generative AI to accelerate your workflow.</p>
+          <p>Created by Adit Rathour.</p>
+       </div>
+       <div id="author-view" class="hidden">
+          <h1>Author</h1>
+          <p>Designed and Developed by: <strong>Adit Rathour</strong></p>
+          <p>Contact: <a href="mailto:aditprataps@gmail.com">aditprataps@gmail.com</a></p>
+       </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
